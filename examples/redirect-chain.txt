@@ -1,0 +1,13 @@
+HTTP/1.1 301 Moved Permanently
+Date: Sat, 11 Jul 2026 12:00:00 GMT
+Server: nginx
+Location: https://example.test/
+Content-Length: 0
+
+HTTP/2 200
+date: Sat, 11 Jul 2026 12:00:01 GMT
+content-type: text/html
+cache-control: max-age=3600
+expires: Sat, 11 Jul 2026 13:00:00 GMT
+vary: *
+

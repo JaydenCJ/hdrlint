@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Date: Sat, 11 Jul 2026 12:00:00 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 1234
+Cache-Control: private, no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Content-Security-Policy: default-src 'self'; frame-ancestors 'none'
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+ETag: "v42"
+Server: nginx
+

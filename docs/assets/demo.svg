@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="452" viewBox="0 0 840 452" font-family="Menlo, Consolas, monospace" font-size="13">
+  <rect width="840" height="452" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="420" y="27" fill="#8b949e" text-anchor="middle" font-size="12">hdrlint — every finding cites its RFC</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="60"><tspan fill="#7ee787">$</tspan> curl -sD - -o /dev/null https://example.test/ | hdrlint check -</text>
+    <text x="24" y="90"><tspan fill="#79c0ff">stdin#1  HTTP/1.1 200 OK</tspan></text>
+    <text x="24" y="114">  <tspan fill="#f85149">error</tspan> cache-no-store-conflict   no-store contradicts max-age        <tspan fill="#8b949e">[RFC 9111 §5.2.2.5]</tspan></text>
+    <text x="24" y="136">  <tspan fill="#f85149">error</tspan> cookie-no-secure          cookie "session" lacks Secure       <tspan fill="#8b949e">[RFC 6265 §4.1.2.5]</tspan></text>
+    <text x="24" y="158">  <tspan fill="#f85149">error</tspan> etag-malformed            ETag 33a64df… is not quoted         <tspan fill="#8b949e">[RFC 9110 §8.8.3]</tspan></text>
+    <text x="24" y="180">  <tspan fill="#d29922">warn </tspan> expires-invalid           Expires "0" is not an HTTP-date     <tspan fill="#8b949e">[RFC 9111 §5.3]</tspan></text>
+    <text x="24" y="202">  <tspan fill="#d29922">warn </tspan> hsts-missing              no Strict-Transport-Security        <tspan fill="#8b949e">[RFC 6797 §7.1]</tspan></text>
+    <text x="24" y="224">  <tspan fill="#d29922">warn </tspan> nosniff-missing           X-Content-Type-Options is not set   <tspan fill="#8b949e">[WHATWG Fetch]</tspan></text>
+    <text x="24" y="246">  <tspan fill="#58a6ff">info </tspan> csp-missing               no Content-Security-Policy          <tspan fill="#8b949e">[W3C CSP3]</tspan></text>
+    <text x="24" y="268">  <tspan fill="#58a6ff">info </tspan> server-version            "Apache/2.4.62" reveals a version   <tspan fill="#8b949e">[RFC 9110 §10.2.4]</tspan></text>
+    <text x="24" y="290" fill="#8b949e">  ⋮ 1 more warning, 3 more notices</text>
+    <text x="24" y="320">checked 1 response against 50 rules: <tspan fill="#f85149">3 errors</tspan>, <tspan fill="#d29922">4 warnings</tspan>, <tspan fill="#58a6ff">5 notices</tspan></text>
+    <text x="24" y="356"><tspan fill="#7ee787">$</tspan> hdrlint explain etag-malformed</text>
+    <text x="24" y="382"><tspan fill="#d2a8ff">etag-malformed</tspan>  (caching, error)</text>
+    <text x="24" y="404">  Unquoted ETags break If-None-Match at strict caches and CDNs.</text>
+    <text x="24" y="426">  citation: <tspan fill="#7ee787">RFC 9110 §8.8.3</tspan> — rfc-editor.org/rfc/rfc9110#section-8.8.3</text>
+  </g>
+</svg>

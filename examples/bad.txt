@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Date: Sat, 11 Jul 2026 12:00:00 GMT
+Server: Apache/2.4.62 (Ubuntu)
+Content-Type: text/html; charset=utf-8
+Cache-Control: no-store, max-age=600
+Expires: 0
+ETag: 33a64df551425fcc
+Set-Cookie: session=AAAAAAAAAAA; Path=/; HttpOnly
+
